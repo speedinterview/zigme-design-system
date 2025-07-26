@@ -1,0 +1,177 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ZigMe Design System - Core Styles
+ * This file contains the foundational design tokens for all ZigMe apps
+ * All colors MUST be HSL format for consistent theming
+ */
+
+@layer base {
+  :root {
+    /* Core System Colors */
+    --background: 227 100% 97%;
+    --foreground: 207 100% 21%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 18% 35%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 18% 35%;
+
+    --primary: 207 100% 21%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 24 100% 59%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 227 100% 96%;
+    --muted-foreground: 234 16% 56%;
+
+    --accent: 24 100% 59%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 227 50% 92%;
+    --input: 227 50% 92%;
+    --ring: 207 100% 21%;
+
+    --radius: 0.5rem;
+
+    /* Sidebar System */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 240 18% 35%;
+    --sidebar-primary: 207 100% 21%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 227 100% 96%;
+    --sidebar-accent-foreground: 240 18% 35%;
+    --sidebar-border: 227 50% 92%;
+    --sidebar-ring: 207 100% 21%;
+
+    /* ZigMe Brand Design System Tokens */
+    --brand-primary: 207 100% 21%;
+    --brand-secondary: 24 100% 59%;
+    --surface-light: 227 100% 97%;
+    --surface-card: 0 0% 100%;
+    --surface-dark: 207 97% 17%;
+    --text-body: 240 18% 35%;
+    --text-muted: 234 16% 56%;
+    --border-subtle: 227 50% 92%;
+    --icon-accent: 227 100% 96%;
+  }
+
+  .dark {
+    /* Dark Mode System Colors */
+    --background: 207 97% 17%;
+    --foreground: 0 0% 100%;
+
+    --card: 207 90% 20%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 207 90% 20%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 24 100% 59%;
+    --primary-foreground: 207 97% 17%;
+
+    --secondary: 207 100% 21%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 207 80% 25%;
+    --muted-foreground: 227 30% 70%;
+
+    --accent: 24 100% 59%;
+    --accent-foreground: 207 97% 17%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 207 50% 30%;
+    --input: 207 50% 30%;
+    --ring: 24 100% 59%;
+
+    /* Dark Mode Sidebar */
+    --sidebar-background: 207 90% 20%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 24 100% 59%;
+    --sidebar-primary-foreground: 207 97% 17%;
+    --sidebar-accent: 207 80% 25%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 207 50% 30%;
+    --sidebar-ring: 24 100% 59%;
+
+    /* Dark mode overrides for ZigMe design system tokens */
+    --brand-primary: 24 100% 59%;
+    --brand-secondary: 207 100% 21%;
+    --surface-light: 207 97% 17%;
+    --surface-card: 207 90% 20%;
+    --surface-dark: 207 100% 21%;
+    --text-body: 0 0% 100%;
+    --text-muted: 227 30% 70%;
+    --border-subtle: 207 50% 30%;
+    --icon-accent: 207 80% 25%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Poppins', 'Inter', sans-serif;
+  }
+
+  /* ZigMe Typography System */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: hsl(var(--brand-primary));
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.15;
+  }
+
+  h3 {
+    font-size: 1.75rem;
+    font-weight: 600;
+  }
+
+  .text-body-lg {
+    font-size: 1.125rem;
+    line-height: 1.55;
+  }
+
+  .text-body-sm {
+    font-size: 0.875rem;
+    line-height: 1.45;
+  }
+
+  /* Enhanced shadows */
+  .shadow-card {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  }
+
+  .shadow-popover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    transition: all 0.25s ease-out;
+  }
+}
